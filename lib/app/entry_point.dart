@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 import '../screens/starter.dart';
 
@@ -15,6 +16,7 @@ class EntryPoint extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xFF0E1D3E),
       ),
       home: const Starter(),
+      builder: EasyLoading.init(),
     );
   }
 }

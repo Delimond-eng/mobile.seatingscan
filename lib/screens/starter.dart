@@ -307,12 +307,12 @@ class _StarterState extends State<Starter> {
                       child: InkWell(
                         borderRadius: BorderRadius.circular(30.0),
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Home(),
-                            ),
-                          );
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Home(),
+                              ),
+                              (route) => false);
                         },
                         child: Center(
                           child: SvgPicture.asset(
